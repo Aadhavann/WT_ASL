@@ -1,0 +1,180 @@
+.center, .center-column, .top, .right, .bottom, .left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-column{
+  flex-direction: column;
+}
+
+.top{
+  background-color: rgba(173, 216, 230, 0.5);
+  align-items: flex-start;
+  background-blend-mode: luminosity;
+  height: 100px;
+}
+
+.right{
+  justify-content: flex-end;
+}
+
+.bottom{
+  align-items: flex-end;
+}
+
+.left{
+  justify-content: flex-start;
+}
+
+.single-spaced, .single-spaced * {
+  line-height: 1;
+}
+
+.hero{
+  background: black url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2021/08/ASL-cover-image.jpg?resize=1250,1120") center / cover;
+}
+h1{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  font-weight: bold;
+}
+@media (max-width:1024px){
+  .destkop{
+      display:none;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: darkblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left:50px;
+  margin-right:50px;
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Active/focus effect */
+.button:focus,
+.button:active {
+  outline: none;
+  background-color: #0056b3;
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  padding: 10px; /* Add some padding to create distance */
+}
+
+.left,
+.center,
+.right {
+  padding: 10px;
+}
+
+.notification{
+  height: 450px;
+  width: 300px;
+  padding: 20px;
+  position:absolute;
+  margin: 20px;
+}
+
+.b1 {
+  display: block;
+width: 100%;
+background-color: rgb(89, 240, 89);
+color: white;
+text-align: center;
+padding: 15px 20px; 
+border: 2px solid white;
+text-decoration: none; /* Remove underline for anchor tag */
+border-radius: 10px;
+}
+
+.c1{
+  width: 1100px;
+  background-color: rgb(220,220,220,0.6);
+  margin-bottom: 20px;
+}
+
+.current{
+  background-color: lightgreen;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  margin-left:50px;
+  margin-right:50px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.abcd {
+  position: relative;
+}
+
+.abcd img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Ensure it's above other content */
+}
+
+.image-container img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  /* Optional styling */
+  border: 2px solid #fff;
+  border-radius: 50%; /* If the image is circular */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
