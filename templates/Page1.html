@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='Page1.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        
+    </head>
+    <body>
+        <section class="hero is-fullheight">
+            <div class="hero-head">
+                <div class="top">
+                    <div class="image-container">
+                        <img src="file:///C:/Users/ejaeg/Downloads/ASL.png" alt="logo" width="150px" height="10px">
+                    </div>
+                    <h1 class="title center" style="top:0">Sign Language Recognition</h1>
+                </div>
+                <div class="navbar has-background-info">
+                    <a href="/Home" class="mr-6">Home</a>
+                    <a class="active mr-6" href="/Page1">Demo</a>
+                    <a href="https://study.com/academy/lesson/the-history-of-sign-language.html#:~:text=As%20early%20as%20the%2011th,educate%20deaf%20students%20in%20Spain." class="mr-6">History</a>
+                    <a href="https://www.udemy.com/course/learnandmastersignlanguage/?utm_source=adwords&utm_medium=udemyads&utm_campaign=DSA_Catchall_la.EN_cc.INDIA&utm_content=deal4584&utm_term=._ag_82569850245.ad_533220805574.kw._de_c.dm._pl._ti_dsa-392130681248.li_1007816.pd.&matchtype=&gad_source=1&gclid=EAIaIQobChMI0Y387vrohAMVp8FMAh0tfAhwEAAYASAAEgLG5_D_BwE" class="mr-6">Online Courses</a>
+                    <a href="/details">About Us</a>
+                    
+                </div>
+                
+            <div class="capture-container">
+                    <div class="capture-box">
+                            <form method="post" action="{{ url_for('tasks') }}">
+                            <input type="submit" value="Capture" name="click"/>
+                            </form>
+                    </div>
+            </div>
+            <div class="webcam-container">
+            <div class="webcam-box">
+                    <img src="{{ url_for('video_feed') }}" height="50%">
+            </div>
+            </div>
+            <div class="text-container">
+            <div class="text-box">
+                This is the text that will be displayed in the box.
+            </div>
+            </div>
+        </section>
+        <script>
+            const webcamVideo = document.getElementById('webcam');
+    
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function(stream) {
+                    webcamVideo.srcObject = stream;
+                })
+                .catch(function(error) {
+                    console.error('Error accessing webcam:', error);
+                });
+            } else {
+                console.error('getUserMedia is not supported by this browser');
+            }
+            video.style.transform = "scaleX(-1)"
+        </script>
+    </body>
+</html>
